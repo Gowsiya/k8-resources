@@ -1,0 +1,9 @@
+#kind: kind of resource you are creating
+#apiVersion: v1
+#metadata: 
+#     name: resource name you want to create
+
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: expense
