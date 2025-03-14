@@ -1,0 +1,29 @@
+kind: service
+apiVersion: v1
+metadata:
+  name: nginx  #service name
+spec:
+  selector: # labels are used as selectors
+    project: expense
+    component: backend
+    enviornment: dev
+    version: "1.0.0"  #this service (nginx) will get attached whatever the pod have these labels 
+  ports:
+  - protocol: TCP
+    port: 80
+    targetport: 80
+---
+kind: Pod
+apiVersion: v1
+metadata:
+  name: backend
+  labels:
+    project: expense
+    component: backend
+    enviornment: dev
+    version: "1.0.0"
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+
