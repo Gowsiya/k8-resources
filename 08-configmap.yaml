@@ -5,3 +5,6 @@ metadata:
 data:
   course: "Kubernetes"
   duration: "28Hrs"
+
+#kubectl get configmap
+#kubectl describe configmap myconfig
